@@ -1,0 +1,9 @@
+{
+  "name": "learning-map-front",
+  "version": "0.0.0",
+  "description": "The Collective Andela Learning Map client side implementation",
+  "main": "server.js",
+  "repository": "git@github.com:andela/learning-map-front.git",
+  "author": "<kesiena.akpobome@andela.com>",
+  "license": "MIT"
+}
