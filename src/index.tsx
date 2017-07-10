@@ -3,7 +3,11 @@ import * as React from 'react';
 /* tslint:enable:no-unused-variable */
 import { render } from 'react-dom';
 
+import ContributionsPage from './components/contributions/contributions.page.component';
+
+import './styles/index.css';
+
 render(
-  <h1> Learning Map is Live!!! </h1>,
+  <ContributionsPage />,
   document.getElementById('app'),
 );
