@@ -1,4 +1,5 @@
-import expect from 'expect';
+import * as expect from 'expect';
+import {describe, it} from 'mocha';
 
 describe('Dummy Test', () => {
   it('should pass regardless of anything', () => {
