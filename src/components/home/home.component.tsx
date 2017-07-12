@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {Button} from 'react-toolbox/lib/button';
-import './addskill.scss';
+import './home.scss';
+import AddSkillForm from '../../pages/addskill/addskill.component';
 
 class SubmitButton extends React.Component<any, any> {
   constructor(props: any) {
@@ -8,7 +8,7 @@ class SubmitButton extends React.Component<any, any> {
   }
   public render() {
     return (
-      <Button label="Add skill" accent />
+      <AddSkillForm />
     );
   }
 }
