@@ -1,6 +1,8 @@
 import * as React from 'react';
 import Dialog from 'react-toolbox/lib/dialog';
 import {Button} from 'react-toolbox/lib/button';
+import Input from 'react-toolbox/lib/input';
+// import Dropdown from 'react-toolbox/lib/dropdown';
 import './addskill.scss';
 
 class AddSkillForm extends React.Component<any, any> {
@@ -13,7 +15,6 @@ class AddSkillForm extends React.Component<any, any> {
   }
 
   private actions = [
-    { label: 'Cancel', onClick: this.handleToggle },
     { label: 'Submit', onClick: this.handleToggle },
   ];
 
@@ -29,9 +30,9 @@ class AddSkillForm extends React.Component<any, any> {
           type="large"
           title="Contribute a New Skill"
         >
-          <p>Skill inputfield</p>
-          <p>Paths dropdown input</p>
-          <p>Reason for implementing this skill</p>
+          <Input type="text" label="Skill"/>
+          <p>Dropdown</p>
+          <Input type="text" multiline label="Why do you think this skill should be implemented?" />
           <ul>
             <li>Output accordion</li>
             <li>Knowledge units accordion</li>
