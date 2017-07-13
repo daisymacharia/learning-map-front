@@ -3,7 +3,9 @@ import * as React from 'react';
 /* tslint:enable:no-unused-variable */
 import { render } from 'react-dom';
 
+import DummyComponent from './components/dummy/dummy.component';
+
 render(
-  <h1> Learning Map is Live!!! </h1>,
+  <DummyComponent />,
   document.getElementById('app'),
 );
