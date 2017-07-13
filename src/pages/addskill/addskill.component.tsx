@@ -2,7 +2,7 @@ import * as React from 'react';
 import Dialog from 'react-toolbox/lib/dialog';
 import {Button} from 'react-toolbox/lib/button';
 import Input from 'react-toolbox/lib/input';
-// import Dropdown from 'react-toolbox/lib/dropdown';
+import PathDropdown from './dropdown';
 import './addskill.scss';
 
 class AddSkillForm extends React.Component<any, any> {
@@ -31,7 +31,7 @@ class AddSkillForm extends React.Component<any, any> {
           title="Contribute a New Skill"
         >
           <Input type="text" label="Skill"/>
-          <p>Dropdown</p>
+          <PathDropdown />
           <Input type="text" multiline label="Why do you think this skill should be implemented?" />
           <ul>
             <li>Output accordion</li>
