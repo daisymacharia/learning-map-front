@@ -9,7 +9,7 @@
   "scripts": {
     "start:dev": "npm-run-all --parallel start test:watch",
     "start": "babel server.js --out-file server-transpiled.js && node server-transpiled.js",
-    "test": "mocha  \"src/**/*.test.js\" --compilers js:babel-core/register",
+    "test": "mocha  \"src/**/*.test.ts\" --compilers js:babel-core/register",
     "test:watch": "npm run test -- --watch"
   },
   "devDependencies": {
