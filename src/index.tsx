@@ -1,11 +1,9 @@
-/* tslint:disable:no-unused-variable */
 import * as React from 'react';
-/* tslint:enable:no-unused-variable */
 import { render } from 'react-dom';
+import { createStore } from 'redux';
+import App from './reducers';
+import Root from './routes/routes';
 
-import DummyComponent from './components/dummy/dummy.component';
+const store = createStore(App);
 
-render(
-  <DummyComponent />,
-  document.getElementById('app'),
-);
+render(<Root store={store} />, document.getElementById('app'));
