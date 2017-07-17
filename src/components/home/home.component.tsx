@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './home.scss';
-import AddSkillForm from '../../pages/addskill/addskill.component';
+import AddSkillForm from '../../pages/addskill/addskill.container.component';
 
 class SubmitButton extends React.Component<any, any> {
   constructor(props: any) {

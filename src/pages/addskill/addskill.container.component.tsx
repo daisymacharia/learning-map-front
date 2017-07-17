@@ -1,3 +1,12 @@
+// src/pages/addskill/addskill.container.component.tsx
+
+/*
+* AddSkill main container component
+* */
+
+import {connect, dispatch} from 'react-redux';
+import {bindActionCreators} from 'redux';
+
 import * as React from 'react';
 import Dialog from 'react-toolbox/lib/dialog';
 import {Button} from 'react-toolbox/lib/button';
@@ -5,10 +14,21 @@ import Input from 'react-toolbox/lib/input';
 import PathDropdown from './dropdown';
 import './addskill.scss';
 
-class AddSkillForm extends React.Component<any, any> {
+class AddSkillContainer extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     this.state = { active: false};
+
+    this.addSkill = this.addSkill.bind(this);
+    this.addPath = this.addPath.bind(this);
+  }
+
+  private addPath(event) {
+    // add path
+  }
+
+  private addSkill(event) {
+    // add skill
   }
   private handleToggle = () => {
     this.setState({active: !this.state.active});
@@ -45,4 +65,16 @@ class AddSkillForm extends React.Component<any, any> {
   }
 }
 
-export default AddSkillForm;
+function mapStateToProps(state, ownProps) {
+  return {
+    paths: state.paths,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddSkillContainer);
