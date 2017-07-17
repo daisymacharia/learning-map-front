@@ -18,6 +18,8 @@ module.exports = {
     loaders: [
       { test: /\.tsx?$/, include: path.join(__dirname, 'src'), loaders: ['ts-loader', 'tslint-loader'] },
       { test: /(\.css)$/, loader: 'style-loader!css-loader?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!sass-loader' },
+      { test: /(\.scss)$/, loaders: ['style-loader', 'css-loader','sass-loader'] },
+      { test: /\.(jpe?g|png|gif|svg|jpg)$/i, loaders: [ 'file-loader', 'image-webpack-loader' ] },
       { test: /\.(js|jsx)$/, include: path.join(__dirname, 'src'),loader: 'babel-loader', query: { presets: ['es2015', 'react'] } },
       { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader' },
       { test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000' },
