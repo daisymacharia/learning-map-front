@@ -1,0 +1,67 @@
+$color_1: #a8a8a8;
+$color_2: #333333;
+$color_3: white;
+$font_family_1: lato, sans-serif;
+
+#form {
+  font-family: $font_family_1;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 3px;
+  width: 60%;
+  background: white;
+  text-align: center;
+}
+
+form > h2 {
+  color: $color_2;
+  text-align: center;
+}
+form > label {
+  color:$color_1;
+  padding-bottom: 40px;
+}
+
+form > Button {
+  background: #47E4C2 !important;
+  border-radius: 3px;
+  color: $color_3;
+  padding:8px 15px;
+  min-width:170px;
+  height:50px;
+}
+
+textarea {
+  height:6.25em !important;
+  resize:none;
+  border-bottom:1px solid $color_1 !important;
+}
+
+input {
+  border-bottom:1px solid $color_1 !important;
+}
+
+@media only screen and (max-width: 700px) {
+  #idea-form {
+    width:80%;
+  }
+}
+
+.form-success {
+  background: #dff0d8;
+  color: #3c763d;
+ 
+  button {
+    color: #3c763d !important;
+  }
+}
+
+.form-failure {
+  background: #f2dede;
+  color: #a94442;
+  position: absolute;
+    
+  button {
+    color: #a94442 !important;
+  }
+}

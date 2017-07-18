@@ -193,7 +193,13 @@ body,
     /* Display & Box Model */
     margin: 15px 8px;
     width: 50%;
-  }
+    }
+}
+
+.dialog {
+    height: 45em;
+    overflow: auto !important;
+    width: 50%;
 }
 
 .btn-all-contribute {
