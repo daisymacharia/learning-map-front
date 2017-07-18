@@ -34,6 +34,7 @@ describe('<HomePage />', () => {
 
   // Test if the landing page renders all contribution button
   it('renders all contribution button', () => {
-    expect(wrapper.contains(<a href="/contributions" className="btn btn-all-contribute">ALL CONTRIBUTIONS</a>)).to.equal(true);
+    expect(wrapper.contains(<a href="/contributions"
+    className="btn btn-all-contribute">ALL CONTRIBUTIONS</a>)).to.equal(true);
   });
 });

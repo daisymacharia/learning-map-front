@@ -6,7 +6,7 @@ import { IHomeProps } from '../../interfaces/home.d';
 import { IHomeState } from '../../interfaces/home.d';
 
 // styling
-import './HomePage.scss';
+import './home.scss';
 
 /**
  * Home Component
@@ -14,7 +14,7 @@ import './HomePage.scss';
  * Landing page for The Learning Map
  */
 
-export class HomePage extends React.Component<IHomeProps, IHomeState> {
+export class HomeComponent extends React.Component<IHomeProps, IHomeState> {
   constructor(props) {
     super(props);
     this.state = {
@@ -69,9 +69,6 @@ export class HomePage extends React.Component<IHomeProps, IHomeState> {
                    <AddResourceForm toggle={this.toggleDialog} />
                 </Dialog>)
               } />
-          </div>
-          <div id="btn-all-contribute">
-            <a href="/contributions" className="btn btn-all-contribute">ALL CONTRIBUTIONS</a>
           </div>
         </div>
       </ Router>

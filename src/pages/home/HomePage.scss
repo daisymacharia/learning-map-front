@@ -1,6 +1,7 @@
 html,
 body,
 #app {
+<<<<<<< HEAD:src/pages/home/HomePage.scss
   /* Display & Box Model */
   margin: 0;
   padding: 0;
@@ -42,6 +43,40 @@ body,
   /* Text */
   font-size: 58px;
   font-weight: 900;
+=======
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+
+#landing {
+    background-image: url("../../../assets/images/space05.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#landing-body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 60% !important;
+    top: 40% !important;
+    text-align: center;
+    color: white;
+    font-family: lato, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#calm-abbreviation {
+    font-size: 58px;
+    font-weight: 900;
+>>>>>>> d81f5da... feature(component): create Add Resource component:src/pages/home/home.scss
 }
 
 #calm {
@@ -147,6 +182,7 @@ body,
 }
 
 #search-area {
+<<<<<<< HEAD:src/pages/home/HomePage.scss
   /* Display & Box Model */
   margin: 20px 20px;
   width: 30%;
@@ -173,6 +209,24 @@ body,
 
   /* Color */
   color: #3a3a3a;
+=======
+    margin: 20px 20px;
+    color: white;
+    width: 30%;
+    position: absolute;
+}
+
+#search-bar {
+    border: 1px solid white;
+    font-size: 12px;
+    padding: 10px;
+    outline: none;
+    width: 80%;
+    height: 20px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #3a3a3a;
+>>>>>>> d81f5da... feature(component): create Add Resource component:src/pages/home/home.scss
 }
 
 #logo-bar {
@@ -189,6 +243,7 @@ body,
 }
 
 @media only screen and (min-width: 500px) and (max-width: 1024px) {
+<<<<<<< HEAD:src/pages/home/HomePage.scss
   #search-area {
     /* Display & Box Model */
     margin: 15px 8px;
@@ -226,4 +281,16 @@ body,
 
   /* Text */
   text-align: center;
+=======
+    #search-area {
+        margin: 15px 8px;
+        width: 50%;
+    }
+}
+
+.dialog {
+    height: 45em;
+    overflow: auto !important;
+    width: 50%;
+>>>>>>> d81f5da... feature(component): create Add Resource component:src/pages/home/home.scss
 }
