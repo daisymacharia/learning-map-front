@@ -4,16 +4,12 @@
  * Skills Reducers
  * */
 
+import { ADD_SKILL } from '../../constants/skills';
+
 export default function skillReducer(state = [], action) {
   switch (action.type) {
-    case 'ADDOUTPUTITEM':
-      return [ ...state,
-        Object.assign({}, action.output),
-      ];
-    case 'ADDSKILL':
-      return [
-      //
-      ];
+    case ADD_SKILL:
+      return Object.assign({}, state, {});
     default:
       return state;
   }

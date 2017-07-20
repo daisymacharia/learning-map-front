@@ -1,1 +1,17 @@
+ .overflow-wrapper {
+  //max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 
+.panel-head {
+  width: 100%;
+}
+
+.panel-hide {
+  display: none;
+}
+
+.panel-show {
+  display: block;
+}

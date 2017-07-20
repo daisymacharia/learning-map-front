@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import skills from './skillReducer';
+import skills from './skills/skillReducer';
 
 const mainReducer = combineReducers({
   skills,
