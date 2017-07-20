@@ -15,18 +15,19 @@ import Okbbs from './okbbs.component';
 class AddSkillForm extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
+    this.state = {
+      actions: [
+        { label: 'Submit', onClick: this.props.showDialog },
+      ],
+    };
   }
-
-  public actions = [
-    { label: 'Submit', onClick: this.props.showDialog },
-  ];
 
   public render() {
     return (
       <div>
         <Button label="Contribute a Skill" onClick={this.props.showDialog} />
         <Dialog
-          actions={this.actions}
+          actions={this.state.actions}
           active={this.props.active}
           onEscKeyDown={this.props.showDialog}
           onOverlayClick={this.props.showDialog}

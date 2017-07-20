@@ -6,9 +6,8 @@
 
 import * as React from 'react';
 import {IOkbb} from '../../types/skills/skillTypes';
-
-import Panel from './panel.component';
 import './addskill.scss';
+import Panel from './panel.component';
 
 class Okbbs extends React.Component<any, any> {
   constructor(props: IOkbb) {
@@ -18,15 +17,15 @@ class Okbbs extends React.Component<any, any> {
     this.state = {
       activeSection: 0, // 0 none, 1-first ... 4-last
       okbbs: {
-        outputs: ['output-item-1', 'output-item-2'],
-        knowledgeUnits: ['knowledge-item-1', 'knowledge-item-2'],
         behaviours: ['behaviour-item-1', 'behaviour-item-2'],
         beliefs: ['belief-item-1', 'belief-item-2'],
+        knowledgeUnits: ['knowledge-item-1', 'knowledge-item-2'],
+        outputs: ['output-item-1', 'output-item-2'],
       },
     };
     this.handleAccordionToggle = this.handleAccordionToggle.bind(this);
   }
-  private handleAccordionToggle(requester: number) {
+  public handleAccordionToggle(requester: number) {
     // called on clicking panel section, manages accordion state
     /*
     * if requester is active:
@@ -51,10 +50,10 @@ class Okbbs extends React.Component<any, any> {
     return(
       <div>
         <h3>Provide OKBBs</h3>
-        <Panel dataList={this.props.okbb.outputs } />
-        <Panel dataList={this.props.okbb.knowledgeUnits } />
-        <Panel dataList={this.props.okbb.behaviours } />
-        <Panel dataList={this.props.okbb.beliefs } />
+        <Panel dataList={this.state.okbbs.outputs } />
+        <Panel dataList={this.state.okbbs.knowledgeUnits } />
+        <Panel dataList={this.state.okbbs.behaviours } />
+        <Panel dataList={this.state.okbbs.beliefs } />
       </div>
     );
   }

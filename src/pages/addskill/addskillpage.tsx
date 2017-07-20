@@ -11,7 +11,6 @@ import {bindActionCreators} from 'redux';
 import * as React from 'react';
 import {Button} from 'react-toolbox/lib/button';
 import './addskill.scss';
-import {IOkbb} from '../../types/skills/skillTypes';
 import AddSkillForm from './addskillform.component';
 
 class AddSkillPage extends React.Component<any, any> {
@@ -23,13 +22,13 @@ class AddSkillPage extends React.Component<any, any> {
       // skill initial state: empty fields
       skill: {
         name: '',
-        reasonForImplementation: '',
         okbbs: {
-          outputs: [],
-          knowledgeUnits: [],
           behaviours: [],
           beliefs: [],
+          knowledgeUnits: [],
+          outputs: [],
         },
+        reasonForImplementation: '',
       },
     };
 
@@ -43,11 +42,11 @@ class AddSkillPage extends React.Component<any, any> {
     this.setState({ active : !this.state.active});
   }
 
-  private aggregateSkillObject(event) {
+  public aggregateSkillObject(event) {
     // aggregate skill object for posting
   }
 
-  private addSkill(event) {  // receive new skill object
+  public addSkill(event) {  // receive new skill object
     /*
     * if object State is valid (minimum data provided)
     * trigger saving current state of skill object to backend
@@ -68,10 +67,4 @@ function mapStateToProps(state, ownProps) {
   };
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-  // addSkill action
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(AddSkillPage);
+export default connect(mapStateToProps)(AddSkillPage);

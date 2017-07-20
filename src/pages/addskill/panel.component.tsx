@@ -10,22 +10,22 @@ import { List, ListItem } from 'react-toolbox/lib/list';
 
 import './addskill.scss';
 
-function Panel({dataList})  {   // receive okbb.list and addItem action
+const Panel = ({dataList}) => {
   return (
   <div>
     <Button className="panel-head" label="Section toggle" raised primary />
-    <section className="">
-      {/*const ItemsList = this.props.dataList.map((listItem) => <ListItem caption={listItem} />*/}
-      {/*<List selectable >*/}
-        {/*ItemsList*/}
-      {/*</List>*/}
+    <section className="panel-hide">
+      {/*const ItemsList = {dataList.map((listItem) => <ListItem caption={listItem}/> ) }*/}
+      <List selectable >
+        {dataList.map((listItem) => <ListItem caption={listItem}/> ) }
+      </List>
       <form>
         <Input type="text" label="Add item" />
-        <Input type="submit" /> {/* onclick addItem to list*/}
+        <Input type="Add" /> {/* onclick addItem to list*/}
       </form>
     </section>
   </div>
   );
-}
+};
 
 export default Panel;
