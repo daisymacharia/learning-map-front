@@ -8,26 +8,30 @@ import winston from 'winston';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 
-const env = process.env.NODE_ENV || 'development';
-if (env !== 'production') {
-  dotenv.config({ silent: true });
-}
-
 const port = process.env.PORT || 3000;
 const app = express();
 const compiler = webpack(config);
+const env = process.env.NODE_ENV || 'development';
 
-app.use(webpackDevMiddleware(compiler, {
-  noInfo: true,
-  publicPath: config.output.publicPath
-}));
+if (env !== 'production') {
+  dotenv.config({ silent: true });
 
-app.use(webpackHotMiddleware(compiler));
+  app.use(webpackDevMiddleware(compiler, {
+    noInfo: true,
+    publicPath: config.output.publicPath
+  }));
+
+  app.use(webpackHotMiddleware(compiler));
+}
+
+app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join( __dirname, 'src/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 app.listen(port, err => {
-  err ? winston.log(err) : open(`http://localhost:${port}`);
+  if (env !== 'production') {
+    err ? winston.log(err) : open(`http://localhost:${port}`);
+  }
 });

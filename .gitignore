@@ -3,3 +3,5 @@ server-transpiled.js
 .env
 .DS_Store
 .idea/
+dist/
+npm-debug.log
