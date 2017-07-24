@@ -10,22 +10,26 @@ import { List, ListItem } from 'react-toolbox/lib/list';
 
 import './addskill.scss';
 
-const Panel = ({dataList}) => {
-  return (
-  <div>
-    <Button className="panel-head" label="Section toggle" raised primary />
-    <section className="panel-hide">
-      {/*const ItemsList = {dataList.map((listItem) => <ListItem caption={listItem}/> ) }*/}
-      <List selectable >
-        {dataList.map((listItem) => <ListItem caption={listItem}/> ) }
-      </List>
-      <form>
-        <Input type="text" label="Add item" />
-        <Input type="Add" /> {/* onclick addItem to list*/}
-      </form>
-    </section>
-  </div>
-  );
-};
+class Panel extends React.Component<{dataList, title, handleToggle, active}, any> {
+  constructor(props: any) {
+    super(props);
+  }
+
+  public render() {
+    return(
+      <div>
+        <Button className="panel-head" label={this.props.title} primary raised
+               onClick={() => this.props.handleToggle(this.props.title)} />
+        <section className={this.props.title === this.props.active ? 'panel-open' : 'panel-closed' }>
+          <List selectable>
+           {this.props.dataList.map((listItem) => <ListItem caption={listItem} key={listItem} /> )}
+          </List>
+          <Input type="text" label="Add item" />
+          <Input type="button" label="Add"/> {/* onclick addItem to list*/}
+        </section>
+      </div>
+    );
+  }
+}
 
 export default Panel;
