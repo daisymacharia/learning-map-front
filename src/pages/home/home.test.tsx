@@ -12,7 +12,9 @@ describe('<HomeComponent />', () => {
 
   // Test if the landing page renders a Contribute button
   it('renders a contribute button', () => {
-    expect(wrapper.contains(<a href="#" className="btn btn-contribute">CONTRIBUTE</a>)).to.equal(true);
+    expect(wrapper.contains(<a className="btn" id="btn-contribute">
+      <div id="contribute-button">CONTRIBUTE</div>
+    </a>)).to.equal(true);
   });
 
   // Test if the landing renders a search area

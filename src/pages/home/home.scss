@@ -1,4 +1,6 @@
-html, body, #app {
+html,
+body,
+#app {
   margin: 0;
   padding: 0;
   min-width: 100%;
@@ -34,34 +36,66 @@ html, body, #app {
 }
 
 #calm {
+  display: block;
   font-size: 30px;
   font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  font-size: 0.8em;
+  width: 120px;
+}
+
+.dropdown-content div:hover {
+  background: #efefef;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content div {
+  color: #333333;
+  background: white;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  margin: 0 auto;
+  width: 140px;
+  position: relative;
+  margin-top: 10px !important;
 }
 
 .btn {
   color: blue;
   text-decoration: none;
+  cursor: pointer;
   padding: 10px 30px;
   border-radius: 25px;
   font-family: verdana;
   font-size: 1em;
 }
 
-.btn-contribute {
+#btn-contribute {
   background: white;
+  margin: 0 auto;
 }
 
 #contribute-button {
-  padding: 20px;
-}
-
-.btn {
-  color: blue;
-  text-decoration: none;
-  padding: 10px 30px;
-  border-radius: 25px;
-  font-family: verdana;
-  font-size: 1em;
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
 }
 
 #search-area {
@@ -84,8 +118,8 @@ html, body, #app {
 }
 
 #logo-bar {
-  background-image: url("../../../assets/images/andela-logo.jpg");
   height: 35px;
+  background-image: url("../../../assets/images/andela-logo.jpg");
   width: 20%;
   padding: 12px;
   padding-left: 30px;
