@@ -1,5 +1,5 @@
 node_modules/
-server-transpiled.js
+*transpiled.js
 .env
 .DS_Store
 .idea/

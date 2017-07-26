@@ -10,7 +10,13 @@
     "start:dev": "npm-run-all --parallel start test:watch",
     "start": "webpack --config=webpack.config.dev.js && babel server.js --out-file server-transpiled.js && node server-transpiled.js",
     "test": "mocha  \"src/**/*.test.tsx\" --compilers ts:ts-node/register,tsx:ts-node/register --require ignore-styles",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "clean-dist": "npm run remove-dist && mkdir dist",
+    "remove-dist": "node_modules/.bin/rimraf ./dist",
+    "copy:html": "cp src/index.html dist/",
+    "prebuild": "npm-run-all clean-dist copy:html",
+    "build": "webpack --config=webpack.config.prod.js",
+    "postbuild": "babel server.js --out-file server-transpiled.js && node server-transpiled.js"
   },
   "devDependencies": {
     "colors": "^1.1.2",
@@ -33,6 +39,7 @@
     "@types/chai": "^4.0.1",
     "@types/jquery": "^3.2.6",
     "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.14",
     "@types/react": "^15.0.35",
     "@types/react-dom": "^15.5.1",
     "babel-cli": "^6.24.1",
@@ -45,6 +52,8 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.24.1",
     "chai": "^4.0.2",
+    "compression": "^1.7.0",
+    "css-loader": "^0.28.4",
     "dotenv": "^4.0.0",
     "enzyme": "^2.9.1",
     "express": "^4.15.3",

@@ -3,7 +3,8 @@ import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import thunk from 'redux-thunk';
 import rootReducers from '../reducers';
 
-const middlewares: any[] = [thunk, reduxImmutableStateInvariant()];
+const middlewares: any[] = process.env.NODE_ENV === 'production' ?
+                            [thunk] : [thunk, reduxImmutableStateInvariant()];
 const initialState = {};
 
 /**
