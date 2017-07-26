@@ -34,9 +34,9 @@ class AddSkillForm extends React.Component<any, any> {
           title="Suggest a skill"
           className="overflow-wrapper"
         >
-          <Input type="text" label="skill name" />
-          <Input type="text" multiline label="Add a reason for implementation" />
-          <Okbbs okbb={this.props.skill.okbbs} /> {/*Pass Okbbs object*/}
+          <Input type="text" value={this.props.name} label="skill name" />
+          <Input type="text" value={this.props.reason} multiline label="Add a reason for implementation" />
+          <Okbbs />
         </Dialog>
       </div>
     );

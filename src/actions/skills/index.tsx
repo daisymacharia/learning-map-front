@@ -8,28 +8,21 @@
  * ADD_SKILL_FAILURE (adding skill failed)
  */
 
-import * as actions from '../../constants/skills/index';
+import * as constants from '../../constants/skills/index';
 
 // action to request to add a new skill object
-export function createSkill(skill) {
+export function addSkill(skill) {
   return {
-    type: actions.ADD_SKILL,
     skill,
+    type: constants.ADD_SKILL,
   };
 }
 
-// action adding new skill successful
-export function addSkillSucess(message) {
+export function updateSkill(key, data, operation) {
   return {
-    type: actions.ADD_SKILL_SUCCESS,
-    message,
-  };
-}
-
-// action adding new skill failed
-export function addSkillFailure(message) {
-  return {
-    type: actions.ADD_SKILL_FAILURE,
-    message,
+    data,
+    key,
+    operation, // add, delete
+    type: constants.UPDATE_SKILL,
   };
 }
