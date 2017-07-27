@@ -1,6 +1,7 @@
 html,
 body,
 #app {
+  /* Display & Box Model */
   margin: 0;
   padding: 0;
   min-width: 100%;
@@ -12,124 +13,211 @@ body,
 }
 
 #landing {
+  /* Display & Box Model */
+  height: 100%;
+  width: 100%;
   background-image: url("../../../assets/images/space05.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  width: 100%;
 }
 
 #landing-body {
+
+   /* Positioning */
   position: absolute;
   left: 0;
   right: 0;
   bottom: 60% !important;
   top: 40% !important;
+
+  /* Text */
   text-align: center;
-  color: white;
   font-family: lato, Verdana, Geneva, Tahoma, sans-serif;
+
+  /* Color */
+  color: white;
 }
 
 #calm-abbreviation {
+  /* Text */
   font-size: 58px;
   font-weight: 900;
 }
 
 #calm {
+  /* Display & Box Model */
   display: block;
+  margin-bottom: 20px;
+
+  /* Text */
   font-size: 30px;
   font-weight: 500;
-  margin-bottom: 20px;
 }
 
 .dropdown-content a {
+  /* Text */
   text-decoration: none;
   font-size: 0.8em;
+
+  /* Display & Box Model */
   width: 120px;
 }
 
 .dropdown-content div:hover {
+  /* Color */
   background: #efefef;
 }
 
 .dropdown {
+  /* Positioning */
   position: relative;
+
+  /* Display & Box Model */
   display: inline-block;
+  margin-right: 10px;
 }
 
 .dropdown:hover .dropdown-content {
+  /* Display & Box Model */
   display: block;
 }
 
 .dropdown-content div {
+  /* Color */
   color: #333333;
   background: white;
+
+  /* Display & Box Model */
   padding: 10px;
+  margin-top: -5px;
+  width: 155px;
+  margin-left: 20px;
+
+  /* Other */
   cursor: pointer;
+
+  /* Positioning */
   position: relative;
 }
 
 .dropdown-content {
   display: none;
   margin: 0 auto;
-  width: 140px;
-  position: relative;
+  position: absolute;
   margin-top: 10px !important;
 }
 
 .btn {
-  color: blue;
-  text-decoration: none;
-  cursor: pointer;
+  /* Display & Box Model */
+  margin: 0 auto;
   padding: 10px 30px;
   border-radius: 25px;
+
+  /* Color */
+  color: #2A46AB;
+
+  /* Text */
+  text-decoration: none;
   font-family: verdana;
   font-size: 1em;
+
+  /* Other */
+  cursor: pointer;
 }
 
 #btn-contribute {
+  /* Color */
   background: white;
+
+  /* Display & Box Model */
   margin: 0 auto;
+
+  /* Positioning */
+  vertical-align: top;
 }
 
 #contribute-button {
+  /* Display & Box Model */
   display: inline-block;
-  position: relative;
   margin: 0 auto;
+  width: 150px;
+
+  /* Positioning */
+  position: relative;
 }
 
 #search-area {
+  /* Display & Box Model */
   margin: 20px 20px;
-  color: white;
   width: 30%;
+
+  /* Color */
+  color: white;
+
+  /* Positioning */
   position: absolute;
 }
 
 #search-bar {
-  border: 1px solid white;
+  /* Text */
   font-size: 12px;
+
+  /* Display & Box Model */
   padding: 10px;
   outline: none;
   width: 80%;
   height: 20px;
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
+  border: 1px solid white;
+
+  /* Color */
   color: #3a3a3a;
 }
 
 #logo-bar {
+  /* Display & Box Model */
   height: 35px;
-  background-image: url("../../../assets/images/andela-logo.jpg");
   width: 20%;
   padding: 12px;
   padding-left: 30px;
   padding-bottom: 13px;
   padding-top: 11.5px;
+
+  /* Display & Box Model */
+  background-image: url("../../../assets/images/andela-logo.jpg");
 }
 
 @media only screen and (min-width: 500px) and (max-width: 1024px) {
   #search-area {
+    /* Display & Box Model */
     margin: 15px 8px;
     width: 50%;
   }
+}
+
+.btn-all-contribute {
+  /* Color */
+  background: white;
+
+  /* Display & Box Model */
+  width: 150px
+}
+
+#btn-all-contribute {
+  /* Display & Box Model */
+  display: inline-block;
+}
+
+#buttons-landing {
+  /* Position */
+  position:relative;
+
+  /* Display & Box Model */
+  margin: 0 auto !important;
+  width: 800px;
+  display: inline-block;
+
+  /* Text */
+  text-align: center;
 }

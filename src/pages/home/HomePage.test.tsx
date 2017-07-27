@@ -5,10 +5,10 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
 // pages
-import { HomeComponent } from './home.component';
+import { HomePage } from './HomePage.component';
 
-describe('<HomeComponent />', () => {
-  const wrapper: any = shallow(<HomeComponent />);
+describe('<HomePage />', () => {
+  const wrapper: any = shallow(<HomePage />);
 
   // Test if the landing page renders a Contribute button
   it('renders a contribute button', () => {
@@ -30,5 +30,10 @@ describe('<HomeComponent />', () => {
   // Test if it displays the product title
   it('displays the product title', () => {
     expect(wrapper.contains(<span id="calm">The Collective Andela Learning Map</span>)).to.equal(true);
+  });
+
+  // Test if the landing page renders all contribution button
+  it('renders all contribution button', () => {
+    expect(wrapper.contains(<a href="/contributions" className="btn btn-all-contribute">ALL CONTRIBUTIONS</a>)).to.equal(true);
   });
 });

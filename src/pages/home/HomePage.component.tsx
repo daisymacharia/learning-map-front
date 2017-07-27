@@ -2,14 +2,14 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 // styling
-import './home.scss';
+import './HomePage.scss';
 
 /**
  * Home Component
  *
  * Landing page for The Learning Map
  */
-export class HomeComponent extends React.Component<{}, {}> {
+export class HomePage extends React.Component<{}, {}> {
 
   /**
    * Render the home page
@@ -29,6 +29,7 @@ export class HomeComponent extends React.Component<{}, {}> {
           <span id="calm-abbreviation">C.A.L.M</span>
           <br />
           <span id="calm">The Collective Andela Learning Map</span>
+          <div id="buttons-landing">
           <div className="dropdown">
             <a className="btn" id="btn-contribute">
               <div id="contribute-button">CONTRIBUTE</div>
@@ -39,6 +40,10 @@ export class HomeComponent extends React.Component<{}, {}> {
               <Link to="/idea"><div>ADD AN IDEA</div></Link>
               <Link to="/skill"><div>ADD AN OKBB</div></Link>
             </div>
+          </div>
+          <div id="btn-all-contribute">
+            <a href="/contributions" className="btn btn-all-contribute">ALL CONTRIBUTIONS</a>
+          </div>
           </div>
         </div>
       </div>

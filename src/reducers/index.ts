@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
+import contributions from './contributionReducers';
 
-const mainReducer = combineReducers({
+const rootReducer = combineReducers({
+  contributions,
 });
 
-export default mainReducer;
+export default rootReducer;

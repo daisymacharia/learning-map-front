@@ -1,13 +1,16 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-
-import { HomeComponent } from '../pages/home/home.component';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { ContributionPage } from '../pages/contributions/ContributionPage.component';
+import { HomePage } from '../pages/home/HomePage.component';
 
 const Root = ({ store }) => (
   <Provider store={store}>
     <Router>
-      <Route path="/" component={ HomeComponent } />
+      <Switch>
+        <Route exact path="/" component={ HomePage } />
+        <Route  path="/contributions" component={ ContributionPage } />
+      </Switch>
     </Router>
   </Provider>
 );

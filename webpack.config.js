@@ -1,7 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const autoprefixer = require('postcss-cssnext');
-const postcssConfig = path.resolve(process.cwd(), './postcss.config.js');
 
 // webpack.config.js
 module.exports = {

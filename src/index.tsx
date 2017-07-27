@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { render } from 'react-dom';
 import { createStore } from 'redux';
-import App from './reducers';
 import Root from './routes/routes';
+import configureStore from './store/store';
 
-const store = createStore(App);
+const store = configureStore({});
 
 render(<Root store={store} />, document.getElementById('app'));
