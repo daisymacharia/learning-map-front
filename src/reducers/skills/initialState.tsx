@@ -1,5 +1,4 @@
 export default {
-  // object errors
   errors: [],
   // app state for a skill
   skill: {

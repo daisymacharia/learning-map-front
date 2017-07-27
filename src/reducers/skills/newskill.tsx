@@ -29,13 +29,15 @@ function handleAddSkillItem(state, action) {
     case 'reasonForImplementation':
       return {...state, reasonForImplementation: action.item};
     case 'Behaviours':
-      return {...state, behaviours: [...state.behaviours, action.item]};
+      return state.behaviours.indexOf(action.item) > -1 ?
+        state : {...state, behaviours: [...state.behaviours, action.item]};
     case 'Beliefs':
-      return {...state, beliefs: [...state.beliefs, action.item]};
+      return state.beliefs.indexOf(action.item) > -1 ? state : {...state, beliefs: [...state.beliefs, action.item]};
     case 'Knowledge Units':
-      return {...state, knowledgeUnits: [...state.knowledgeUnits, action.item]};
+      return state.knowledgeUnits.indexOf(action.item) > -1 ?
+        state : {...state, knowledgeUnits: [...state.knowledgeUnits, action.item]};
     case 'Outputs':
-      return {...state, outputs: [...state.outputs, action.item]};
+      return state.outputs.indexOf(action.item) > -1 ? state : {...state, outputs: [...state.outputs, action.item]};
     default:
       return state;
   }
