@@ -7,14 +7,14 @@
   "author": "<kesiena.akpobome@andela.com>",
   "license": "MIT",
   "scripts": {
-    "start:dev": "npm-run-all --parallel start test:watch",
+    "start:dev": "npm start && test:watch",
     "start": "webpack --config=webpack.config.dev.js && babel server.js --out-file server-transpiled.js && node server-transpiled.js",
     "test": "mocha  \"src/**/*.test.tsx\" --compilers ts:ts-node/register,tsx:ts-node/register --require ignore-styles",
     "test:watch": "npm run test -- --watch",
     "clean-dist": "npm run remove-dist && mkdir dist",
     "remove-dist": "node_modules/.bin/rimraf ./dist",
     "copy:html": "cp src/index.html dist/",
-    "prebuild": "npm-run-all clean-dist copy:html",
+    "prebuild": "npm run clean-dist && npm run copy:html",
     "build": "webpack --config=webpack.config.prod.js",
     "postbuild": "babel server.js --out-file server-transpiled.js && node server-transpiled.js"
   },
