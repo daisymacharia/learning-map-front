@@ -8,21 +8,38 @@
  * ADD_SKILL_FAILURE (adding skill failed)
  */
 
-import * as constants from '../../constants/skills/index';
+import * as constants from '../../constants/skills';
+import {ISkill} from '../../interfaces/skills';
+
+export interface IAddSkill {
+  name;
+  reason;
+  type: constants.ADD_SKILL;
+}
+
+export type SkillAction = IAddSkill;
 
 // action to request to add a new skill object
-export function addSkill(skill) {
+export function addSkill(skill: ISkill) {
   return {
     skill,
     type: constants.ADD_SKILL,
   };
 }
 
-export function updateSkill(key, data, operation) {
+export function addSkillItem(key, item) {
   return {
-    data,
+    item,
     key,
-    operation, // add, delete
-    type: constants.UPDATE_SKILL,
+    type: constants.ADD_SKILL_ITEM,
+  };
+}
+
+export function deleteSkillItem(key, item) {
+  // console.log('delete skill action fired');
+  return {
+    item,
+    key,
+    type: constants.DELETE_SKILL_ITEM,
   };
 }

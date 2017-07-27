@@ -7,10 +7,9 @@ import * as React from 'react';
 import { Button } from 'react-toolbox/lib/button';
 import Input from 'react-toolbox/lib/input';
 import { List, ListItem } from 'react-toolbox/lib/list';
-
 import './addskill.scss';
 
-class Panel extends React.Component<{dataList, title, handleToggle, active, addItem}, any> {
+class Panel extends React.Component<{dataList, title, handleToggle, active, addItem, deleteItem}, any> {
   constructor(props: any) {
     super(props);
     this.state = {

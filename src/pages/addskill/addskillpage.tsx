@@ -5,34 +5,35 @@
  * main container for adding a new skill object
  */
 
-import {connect, dispatch} from 'react-redux';
-import {bindActionCreators} from 'redux';
-
 import * as React from 'react';
+import { connect } from 'react-redux';
+import * as skillActions from '../../actions/skills';
 import * as Interfaces from '../../interfaces/skills';
 import './addskill.scss';
 import AddSkillForm from './addskillform.component';
 
-class AddSkillPage extends React.Component<Interfaces.IProps, any> {
-  constructor(props: Interfaces.IProps) {
+class AddSkillPage extends React.Component<Interfaces.ISkill, any> {
+  constructor(props: Interfaces.ISkill) {
     super(props);
-    this.state = {
-      active: false,
-    };
-    this.showDialog = this.showDialog.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+    this.addSkillItem = this.addSkillItem.bind(this);
   }
 
-  public showDialog() {
-    // show or hide dialog state
-    this.setState({ active : !this.state.active});
+  public onSubmit() {
+    this.props.addSkill('key', 'name');
+  }
+
+  // update skill name or reason
+  public addSkillItem(key, item) {
+    this.props.addSkillItem(key, item);
   }
 
   public render() {
     return (
       <AddSkillForm
-        active={this.state.active}
-        showDialog={this.showDialog}
         name={this.props.name}
+        onSubmit={this.onSubmit}
+        addSkillItem={this.addSkillItem}
         reason={this.props.reason}
       />
     );
@@ -46,4 +47,11 @@ function mapStateToProps(state, ownProps) {
   };
 }
 
-export default connect(mapStateToProps)(AddSkillPage);
+function mapDispatchToProps(dispatch) {
+  return {
+    addSkill: () => dispatch(skillActions.addSkill(this.state)),
+    addSkillItem: (key, item) => dispatch(skillActions.addSkillItem(key, item)),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddSkillPage);

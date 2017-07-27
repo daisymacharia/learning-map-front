@@ -4,24 +4,8 @@
  * Skills Reducers
  */
 
-import * as Actions from '../../actions/skills/index';
-import * as constants from '../../constants/skills/index';
+import * as constants from '../../constants/skills';
 import initialState from './initialState';
-
-// helper functions for updating skill appState.
-function updateSkill(skill, action) {
-  const updatedSkill = skill.map((section) => {
-    if ((section === action.key) && (action.operation === 'ADD')) {
-      // update okbb array
-      section.concat(action.data);
-    }else if ((section === action.key) && (action.operation === 'DELETE')) {
-      // remove item matching data
-      section = section.filter((item) => item !== action.data);
-    }
-  });
-
-  return updatedSkill;
-}
 
 /**
  *
@@ -32,15 +16,11 @@ function updateSkill(skill, action) {
  * edit a skill
  */
 
-export default function manageSkill(state = initialState.skills, action: any) {
-  console.log(state);
-  return state;
-  // switch (action.type) {
-  //   case constants.ADD_SKILL:
-  //     return Object.assign({}, state, { skills: state.skills.concat(action.skill)});
-  //   case constants.UPDATE_SKILL:
-  //     return Object.assign({}, state, { skill: updateSkill(state.skill, action)});
-  //   default:
-  //     return state;
-  // }
+export default function manageSkill(state = initialState.skills, action) {
+  switch (action.type) {
+    case constants.ADD_SKILL:
+      return {...state, skills: [...state.concat(action.skill)]};
+    default:
+      return state;
+  }
 }
