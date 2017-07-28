@@ -23,16 +23,10 @@ class AddSkillForm extends React.Component<any, any> {
       name: '',
       reason: '',
     };
-    this.showDialog = this.showDialog.bind(this);
     this.handleInputName = this.handleInputName.bind(this);
     this.handleInputReason = this.handleInputReason.bind(this);
     this.updateName = this.updateName.bind(this);
     this.updateReason = this.updateReason.bind(this);
-  }
-
-  public showDialog() {
-    // show or hide dialog state
-    this.setState({ active : !this.state.active});
   }
 
   public handleInputName(data) {
@@ -58,12 +52,12 @@ class AddSkillForm extends React.Component<any, any> {
   public render() {
     return (
       <div>
-        <Button label="Contribute a Skill" onClick={this.showDialog} />
+        <Button label="Contribute a Skill" onClick={this.props.handleFormState} />
         <Dialog
           actions={this.state.actions}
-          active={this.state.active}
-          onEscKeyDown={this.showDialog}
-          onOverlayClick={this.showDialog}
+          active={this.props.active}
+          onEscKeyDown={this.props.handleFormState}
+          onOverlayClick={this.props.handleFormState}
           title="Suggest a skill"
           className="overflow-wrapper"
         >

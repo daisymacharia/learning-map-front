@@ -13,7 +13,15 @@ export interface ISkill {
   beliefs?: string[];
   knowledgeUnits?: string[];
   outputs?: string[];
-  addSkill?: (name, reason) => void;
+  addSkill?: (skill) => void;
   addSkillItem?: (key, item) => void;
   deleteSkillItem?: (key, item) => void;
+}
+
+export interface IProp {
+  name?: string;
+  reason?: string;
+  addSkill?: (skill) => void;
+  addSkillItem?: (key, item) => void;
+  skill: ISkill;
 }
