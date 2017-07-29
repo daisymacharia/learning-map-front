@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 // pages
+import { NavBar } from '../../common/navbar/NavBar.component';
 import ContributionPage from '../contributions/ContributionPage.component';
 
 // notifications
@@ -66,6 +67,7 @@ export class DashboardComponent extends React.Component<any, any> {
     }
     return (
       <div>
+        <NavBar />
         <ContributionPage />
       </div>
     );
