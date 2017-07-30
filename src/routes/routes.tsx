@@ -1,15 +1,16 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
-import { ContributionPage } from '../pages/contributions/ContributionPage.component';
-import { HomePage } from '../pages/home/HomePage.component';
+
+import { DashboardComponent } from '../pages/dashboard/dashboard.component';
+import { LoginComponent } from '../pages/login/login.component';
 
 const Root = ({ store }) => (
   <Provider store={store}>
     <Router>
       <Switch>
-        <Route exact path="/" component={ HomePage } />
-        <Route  path="/contributions" component={ ContributionPage } />
+        <Route exact path="/" component={DashboardComponent} />
+        <Route  exact path="/login" component={LoginComponent} />
       </Switch>
     </Router>
   </Provider>

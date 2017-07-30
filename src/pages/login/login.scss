@@ -1,0 +1,107 @@
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+#landing {
+  background-image: url("../../../assets/images/lm-back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Primary-DINPro, sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+#landing-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 60% !important;
+  top: 32% !important;
+  text-align: center;
+  color: white;
+}
+
+#calm-abbreviation {
+  font-size: 58px;
+  font-weight: 900;
+}
+
+#calm {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.btn {
+  color: #1633b1;
+  text-decoration: none;
+  text-align:center;
+  cursor: pointer;
+  padding: 20px 50px;
+  border-radius: 40px;
+  font-family: Andela-Medium, sans-serif;
+  font-size: 0.9rem;
+}
+
+#btn-login {
+  background: white;
+  margin: 0 auto;
+}
+
+#login-button {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#toaster {
+  color: white;
+  text-decoration: none;
+  text-align:center;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: Primary-DINPro, sans-serif;
+  background-color: #010b44;
+  padding: 15px;
+  padding-bottom: 20px;
+  width: 75%;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.toastify__close {
+  display: none;
+}
+
+#toast-container {
+  text-align: center;
+  position: relative !important;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.toastify {
+  position: relative !important;
+}
+
+.toastify--top-right {
+  position: relative !important;
+}
