@@ -49,7 +49,6 @@ export class DashboardComponent extends React.Component<any, any> {
         this.setState({authorised: false});
       }
     } else {
-      localStorage.setItem('error', 'Unauthorised Access, Please Log in with your Andela Email');
       this.setState({authorised: false});
     }
   }

@@ -21,4 +21,4 @@ const allConfig = {
   },
 };
 
-export const config = allConfig[process.env.NODE_ENV || 'development'];
+export const config = allConfig[process.env.NODE_ENV];

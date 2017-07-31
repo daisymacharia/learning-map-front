@@ -72,7 +72,7 @@ body,
   color: white;
   text-decoration: none;
   text-align:center;
-  cursor: pointer;
+  cursor: auto;
   border-radius: 5px;
   font-family: Primary-DINPro, sans-serif;
   background-color: #010b44;
@@ -84,6 +84,7 @@ body,
   left: 0;
   right: 0;
   margin: auto;
+  border: outset 0px #010b44;
 }
 
 .toastify__close {
@@ -95,7 +96,7 @@ body,
   position: relative !important;
   width: 50%;
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .toastify {
