@@ -7,12 +7,12 @@ const allConfig = {
   production: {
     ANDELA_API_BASE_URL: 'https://api.andela.com',
     API_BASE_URL: 'https://private-3b35e-learningmapapi.apiary-mock.com',
-    BASE_URL: 'https://learning-map.herokuapp.com',
+    BASE_URL: 'http://learningmap-prod.andela.com:3000',
   },
   staging: {
-    ANDELA_API_BASE_URL: 'https://api-staging.andela.com',
+    ANDELA_API_BASE_URL: 'https://api.andela.com',
     API_BASE_URL: 'https://private-3b35e-learningmapapi.apiary-mock.com',
-    BASE_URL: 'http://learning-map-staging.herokuapp.com',
+    BASE_URL: 'https://learning-map.herokuapp.com',
   },
   testing: {
     ANDELA_API_BASE_URL: 'https://api.andela.com',
