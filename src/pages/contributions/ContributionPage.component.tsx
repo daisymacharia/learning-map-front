@@ -9,6 +9,7 @@ import * as contributionsAction from '../../actions/ContributionsAction';
 import * as interfaces from '../../interfaces/contributions.d';
 
 import ContributionList from './ContributionList.component';
+import FiltersComponent from './ContributionsFilter.component';
 
 /**
  * @class ContributionPage

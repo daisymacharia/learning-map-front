@@ -22,23 +22,57 @@ export const ContributionsCard = ({ contributions }) => {
 
   const title = `Title: ${contributions.title}`;
   return (
-      <div className="row" id="card-row">
-        <Card className="card-main">
-          <CardTitle className="main-title"
-            avatar={contributions.img_url}
-            title={contributions.contributor}
-            subtitle={contributions.status}
-          />
-          <CardMedia className="card-media"
-            aspectRatio="wide"
-            image={image}
-          />
-          <CardTitle className="card-title"
-            title={contributions.Category}
-            subtitle={title}
-          />
-        </Card>
+    <div className="contribution-card">
+      <div className="category">
+        <div className="neutral-state">
+          <div className="category-type">
+            <i className="large material-icons">lightbulb_outlines</i>
+          </div>
+        </div>
+
+        <div className="hover-state">
+          <div className="category-type">
+            <i className="large material-icons">lightbulb_outlines</i>
+            <span>IDEA</span>
+          </div>
+          <div className="category-row">
+            <span className="title">PATH</span>
+            <span className="value">Entrepreneur</span>
+          </div>
+          <div className="category-row">
+            <span className="title">LEVEL</span>
+            <span className="value">D3+</span>
+          </div>
+        </div>
       </div>
+      <div className="details">
+        <a className="bookmark">
+          <i className="large material-icons">bookmark</i>
+        </a>
+        <h4 className="title">Facts and Truths</h4>
+        <p>
+          Lorem
+        </p>
+        {/*tags*/}
+        <div className="tags">
+          <span className="tag">sample</span>
+        </div>
+
+        {/*votes*/}
+        <div className="footer">
+          <div className="vote-count">
+            <i className="large material-icons">keyboard_arrow_up</i>
+            <span>34</span>
+          </div>
+
+          {/*comment count*/}
+          <div className="comment-count">
+            <i className="large material-icons">chat</i>
+            <span>34</span>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

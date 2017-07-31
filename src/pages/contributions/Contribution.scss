@@ -1,26 +1,129 @@
-$card-row-float: left;
-$card-row-margin: 10px;
-
-$card-title-height: 100px;
-
-$card-main-height: 300px;
-$card-main-width: 230px;
-
-#card-row {
-  /* Positioning */
-  float: $card-row-float;
-
-  /* Display & Box Model */
-  margin: $card-row-margin
+.container {
+  width: 50vw;
+  height: auto;
+  margin: 0 auto;
 }
 
-.card-title {
-  /* Display & Box Model */
-  height: $card-title-height;
-}
+.contribution-card {
+  display: flex;
+  width: 100%;
+  height: 10rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  border: 1px solid #d8d8d8;
 
-.card-main {
-  /* Display & Box Model */
-  height: $card-main-height;
-  width: $card-main-width;
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  .category {
+    background-color: #000;
+    width: 2.1rem;
+    padding: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    transition: width 300ms ease-out;
+
+    & > .hover-state {
+      display: none;
+    }
+
+    & > .neutral-state {
+      display: block;
+
+      .category-type {
+        justify-content: center;
+      }
+    }
+  }
+
+  .vote-count, .comment-count, .category-type {
+    display: flex;
+    align-items: center;
+  }
+
+  .vote-count, .comment-count i {
+    margin-right: 0.3rem;
+  }
+
+  .comment-count {
+    color: #c9c9c9;
+  }
+
+  .category-type {
+    i {
+      width: 24px;
+    }
+  }
+
+  .category-row {
+    & > span {
+      display: block;
+    }
+
+    .title {
+      margin-top: 1rem;
+      font-size: 0.7rem;
+    }
+
+    .value {
+      font-size: 0.9rem;
+    }
+  }
+
+  .details {
+    position: relative;
+    flex: 1;
+    padding: 1rem;
+
+    .bookmark {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .title {
+      margin-top: 0;
+      font-size: 1rem;
+      color: #2d3134;
+    }
+
+    .description {
+      font-size: 0.85rem;
+      color: #9b9b9b;
+    }
+
+    .tag {
+      background-color: #f9f9fa;
+      min-width: 5rem;
+      height: 1.1rem;
+      border: 1px solid #d8d8d8;
+      border-radius: 0.25rem;
+      padding: 0.2rem 0.5rem;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.2rem;
+    }
+  }
+
+  &:hover {
+    .category {
+      width: 27%;
+      transition: width 300ms ease-in;
+
+      & > .hover-state {
+        display: block;
+      }
+
+      & > .neutral-state {
+        display: none;
+      }
+    }
+  }
 }
