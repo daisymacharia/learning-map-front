@@ -38,5 +38,5 @@ interface IContributionsActionProps {
  * @interface IContributionsPageState
  */
 interface IContributionsPageState {
-  contributions?: IContributions;
+  contributions?: IContributions[];
 }

@@ -16,7 +16,7 @@ import ContributionList from './ContributionList.component';
  */
 @connect((state) => {
   return {
-    contributions: state,
+    contributions: state.contributions,
   };
 })
 
@@ -25,7 +25,7 @@ interfaces.IContributionsPageState> {
   constructor(props: interfaces.IContributionsPageProps) {
     super(props);
     this.state = {
-      contributions: {},
+      contributions: [],
     };
   }
 
@@ -54,7 +54,7 @@ interfaces.IContributionsPageState> {
   public render() {
     const contributions = this.state.contributions;
     return (
-      <div><ContributionList contributions={contributions}/></div>
+      <div><ContributionList contributions={contributions} /></div>
     );
   }
 }
