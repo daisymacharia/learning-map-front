@@ -1,0 +1,22 @@
+@import "../theme.scss";
+
+:root {
+  --unit: 15px;
+  --input-field-font-family: cursive;
+  --input-padding: calc(2 * var(--unit));
+  --input-field-padding: calc(0.05 * var(--unit));
+  --input-field-font-size: calc(1.6 * var(--unit));
+  --input-field-height: calc(var(--input-field-padding) * 2 + var(--input-field-font-size) * 1.4);
+}
+
+.dropdown {
+  .input {
+    border-bottom: 3px solid #272727;
+  }
+}
+
+.value {
+  & > input {
+    border-bottom: 1px solid #272727;
+  }
+}

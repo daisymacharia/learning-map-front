@@ -1,0 +1,36 @@
+@import "../theme.scss";
+
+:root {
+  --unit: 15px;
+  --input-field-font-family: Primary-DINPro;
+  --input-padding: calc(2 * var(--unit));
+  --input-field-padding: calc(0.5 * var(--unit));
+  --input-field-font-size: calc(1.6 * var(--unit));
+  --input-field-height: calc(var(--input-field-padding) * 2 + var(--input-field-font-size) * 1.4);
+}
+
+.input {
+  .inputElement {
+    border-bottom: 1px solid #272727;
+    font-family: var(--input-field-font-family) !important;
+    font-size: var(--input-field-font-size);
+    padding: var(--input-field-padding) 0;
+  }
+
+  .hint {
+    font-family: var(--input-field-font-family) !important;
+    opacity: 100%;
+    color: #cccccc;
+    font-size: var(--input-field-font-size);
+    line-height: var(--input-field-font-size);
+    /*top: calc(var(--input-padding) + 1.5 * var(--input-field-padding));*/
+
+    span {
+
+    }
+
+    strong {
+      font-weight: 900;
+    }
+  }
+}
