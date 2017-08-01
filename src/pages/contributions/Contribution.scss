@@ -7,20 +7,15 @@ $card-main-height: 300px;
 $card-main-width: 230px;
 
 #card-row {
-  /* Positioning */
   float: $card-row-float;
-
-  /* Display & Box Model */
   margin: $card-row-margin
 }
 
 .card-title {
-  /* Display & Box Model */
   height: $card-title-height;
 }
 
 .card-main {
-  /* Display & Box Model */
   height: $card-main-height;
   width: $card-main-width;
 }

@@ -8,11 +8,12 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "npm start && test:watch",
-    "start": "webpack --config=webpack.config.dev.js && npm run copy:html && babel server.js --out-file server-transpiled.js && node server-transpiled.js",
+    "start": "webpack --config=webpack.config.dev.js && npm run copy:html && npm run copy:images && babel server.js --out-file server-transpiled.js && node server-transpiled.js",
     "test:watch": "npm run test -- --watch",
     "clean-dist": "npm run remove-dist && mkdir dist",
     "remove-dist": "node_modules/.bin/rimraf ./dist",
     "copy:html": "cp src/index.html dist/",
+    "copy:images": "cp assets/images/* dist/",
     "prebuild": "npm run clean-dist && npm run copy:html",
     "build": "webpack --config=webpack.config.prod.js",
     "postbuild": "babel server.js --out-file server-transpiled.js && node server-transpiled.js",

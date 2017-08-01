@@ -29,9 +29,15 @@
         }
       }
 
+      .logo img {
+        height: 2.5rem;
+        padding-right: 4rem;
+      }
+
       .logo h1 {
         color: map-get($colors, primary);
         font-family: Primary-DINPro, sans-serif;
+        font-weight: 300;
       }
     }
 
@@ -88,14 +94,15 @@
         height: 0.3rem;
         margin-top: 0.4rem;
         margin-left: 0.7rem;
-
       }
+
       .horizontal-line {
         background-color: map-get($colors, primary);
         width: 0.7rem;
         height: 0.07rem;
-        margin-left: 0.35rem;
+        margin-left: 0.4rem;
       }
+
       .thrid-line {
         background-color: map-get($colors, primary);
         width: 0.07rem;
@@ -108,9 +115,11 @@
     .alert {
       width: 1.5rem;
       height: 1.5rem;
-      border: 1px solid map-get($grey, 400);
+      border: 1px solid #9c9c9c;
       border-radius: 50%;
+      i {
+        color: #828586 !important;
+      }
     }
-
   }
 }

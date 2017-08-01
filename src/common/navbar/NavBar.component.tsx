@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Avatar from 'react-toolbox/lib/avatar';
 
 import './NavBar.scss';
 
@@ -9,21 +10,21 @@ export class NavBar extends React.Component <any, any> {
    * @memberof NavBar
    */
   public render() {
+    const image = '/Andela-logo-condensed-blue.png';
     return (
       <div className="nav-bar">
         <div className="container">
           <div className="left-controls">
-
             <div className="menu">
-              <div className="lines">
-              </div>
-              <div className="lines">
-              </div>
-              <div className="lines">
-              </div>
+              <div className="lines"></div>
+              <div className="lines"></div>
+              <div className="lines"></div>
             </div>
             <div className="logo">
-              <h1>CALM</h1>
+              {
+                (image) ? <img src={image}/>
+                : <h1>CALM</h1>
+              }
             </div>
           </div>
           <div className="controls">
@@ -46,6 +47,7 @@ export class NavBar extends React.Component <any, any> {
               </div>
             </div>
             <div className="alert">
+              <i className="material-icons">notifications_none</i>
             </div>
             <div className="profile-pic">
             </div>
