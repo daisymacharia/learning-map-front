@@ -53,10 +53,20 @@
     color: #c9c9c9;
   }
 
-  .category-type {
-    i {
+  .category-skill {
+    background-color: #3dbcfd;
+  }
+
+  .category-resource {
+    background-color: #657be4;
+  }
+
+  .category-idea {
+    background-color: #000;
+  }
+
+  .category-type i {
       width: 24px;
-    }
   }
 
   .category-row {
@@ -126,4 +136,8 @@
       }
     }
   }
+}
+
+#category-text {
+  text-transform: uppercase;
 }
