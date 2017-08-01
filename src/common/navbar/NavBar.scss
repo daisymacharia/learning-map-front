@@ -21,7 +21,11 @@
       width: 15%;
 
       .menu {
-        .lines {
+        &:hover {
+          cursor: pointer;
+        }
+
+        .line {
           background: #7d8080;
           width: 1.3em;
           height: 2px;

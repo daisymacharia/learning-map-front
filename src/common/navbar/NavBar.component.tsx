@@ -15,11 +15,11 @@ export class NavBar extends React.Component <any, any> {
       <div className="nav-bar">
         <div className="container">
           <div className="left-controls">
-            <div className="menu">
-              <div className="lines"></div>
-              <div className="lines"></div>
-              <div className="lines"></div>
-            </div>
+            <a className="menu">
+              <div className="line"></div>
+              <div className="line"></div>
+              <div className="line"></div>
+            </a>
             <div className="logo">
               {
                 (image) ? <img src={image}/>
